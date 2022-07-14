@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import NicksThings from './pages/NicksThings/NicksThings'
 import Landing from './pages/Landing/Landing'
 import DrinkThings from './pages/DrinkThings/DrinkThings'
 
@@ -137,6 +138,14 @@ const App = () => {
       attributes: ["sweet", "tasty", "chewy"],
     },
   ])
+  
+  const [nicksThings, setNicksThings] = useState([
+    {
+      name: 'guitar',
+      image: 'https://pbs.twimg.com/media/E8oSF8dXMAIy6HG?format=jpg',
+      attributes: ['purple', 'custom built', 'loud', 'would kill a medieval peasant'],
+    },
+  ])
 
   return (
     <Routes>
@@ -161,6 +170,10 @@ const App = () => {
       <Route
         path="/the-drink-things"
         element={<DrinkThings things={minjisThings} />}
+      />
+      <Route
+        path="/nicks-things"
+        element={<NicksThings things={nicksThings} />}
       />
     </Routes>
     
