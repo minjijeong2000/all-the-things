@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import EnergyThings from './pages/EnergyThings/EnergyThings'
 import NicksThings from './pages/NicksThings/NicksThings'
 import Landing from './pages/Landing/Landing'
 
@@ -130,6 +131,14 @@ const App = () => {
     },
   ])
 
+  const [juansThings, setJuansThings] = useState([
+    {
+      name: "coffee",
+      image: "https://imgs.xkcd.com/comics/coffee.png",  
+      attributes: ["tasty", "iced", "black", "beautiful"],
+    },
+    ])
+
   const [nicksThings, setNicksThings] = useState([
     {
       name: 'guitar',
@@ -157,6 +166,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-energy-things"
+        element={<EnergyThings things={juansThings} />}
       />
       <Route
         path="/nicks-things"
