@@ -6,6 +6,7 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import EnergyThings from './pages/EnergyThings/EnergyThings'
+import NicksThings from './pages/NicksThings/NicksThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -136,6 +137,14 @@ const App = () => {
       image: "https://imgs.xkcd.com/comics/coffee.png",  
       attributes: ["tasty", "iced", "black", "beautiful"],
     },
+    ])
+
+  const [nicksThings, setNicksThings] = useState([
+    {
+      name: 'guitar',
+      image: 'https://pbs.twimg.com/media/E8oSF8dXMAIy6HG?format=jpg',
+      attributes: ['purple', 'custom built', 'loud', 'would kill a medieval peasant'],
+    },
   ])
 
   return (
@@ -162,7 +171,12 @@ const App = () => {
         path="/the-energy-things"
         element={<EnergyThings things={juansThings} />}
       />
+      <Route
+        path="/nicks-things"
+        element={<NicksThings things={nicksThings} />}
+      />
     </Routes>
+    
   )
 }
 
